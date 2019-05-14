@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: eureka-server
+  freemarker:
+    prefer-file-system-access: false
+server:
+  port: 1113
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:1111/eureka
+    #register-with-eureka: false
+    #fetch-registry: false
+    #提供服务的域名，这里在hosts文件中修改了
+    1instance:
+      hostname: peer2
+

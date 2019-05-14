@@ -1,0 +1,18 @@
+eureka:
+  client:
+    service-url:
+    #向第二个注册中心注册自己
+      defaultZone: http://peer2:1113/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+    #提供服务的域名，这里在hosts文件中修改了
+    1instance:
+      hostname: peer1
+server:
+  port: 1111
+
+spring:
+  application:
+    name: eureka-server1
+  freemarker:
+    prefer-file-system-access: false

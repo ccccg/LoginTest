@@ -1,0 +1,30 @@
+########################################################
+### Spring datasource -- Datasource configuration.
+########################################################
+#spring.datasource.url=jdbc:mysql://localhost:3306/myjpatest?characterEncoding=UTF-8
+#spring.datasource.username=root
+#spring.datasource.password=root
+#spring.datasource.driverClassName = com.mysql.cj.jdbc.Driver
+spring:
+  datasouce:
+    url: jdbc:mysql://localhost:3306/myjpatest?characterEncoding=UTF-8
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#spring.jpa.database = MYSQL
+#spring.jpa.show-sql = true
+#spring.jpa.hibernate.ddl-auto = update
+#spring.jpa.hibernate.naming-strategy = org.hibernate.cfg.ImprovedNamingStrategy
+#spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
+server:
+  port: 8888
