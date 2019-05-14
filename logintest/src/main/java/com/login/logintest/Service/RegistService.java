@@ -15,7 +15,7 @@ public class RegistService {
 
             userRepository.save(user);
             MailUtil mailUtil = new MailUtil(user.getEmail(),user.getCode());
-            mailUtil.sendMail(user);
+            mailUtil.sendMailToActive(user);
             return "http://localhost:8888/active?name="+user.getName()+"&code="+user.getCode();
         }catch (Exception e){
             return e.toString();
